@@ -19,43 +19,31 @@ class Fraccion
    end
    
    def suma (fraccion1)
-      self.numerador = ((self.numerador * fraccion1.denominador) + (self.denominador * fraccion1.numerador))
-      self.denominador = self.denominador * fraccion1.denominador
+      numerador = ((self.numerador * fraccion1.denominador) + (self.denominador * fraccion1.numerador))
+      denominador = self.denominador * fraccion1.denominador
+      return numerador,denominador
    end
    
    def resta (fraccion1)
-      fraccionR = Fraccion.new(1,1)
-      fraccionR.numerador = (self.numerador * fraccion1.denominador) - (self.denominador * fraccion1.numerador)
-      fraccionR.denominador = self.denominador * fraccion1.denominador
-      return fraccionR
+      numerador = (self.numerador * fraccion1.denominador) - (self.denominador * fraccion1.numerador)
+      denominador = self.denominador * fraccion1.denominador
+      return numerador,denominador
    end
    
    def producto (fraccion1)
-      self.numerador = self.numerador * fraccion1.numerador
-      self.denominador = self.denominador * fraccion1.denominador
+      numerador = self.numerador * fraccion1.numerador
+      denominador = self.denominador * fraccion1.denominador
+      return numerador,denominador
    end
    
    def division (fraccion1)
-      self.numerador = self.numerador * fraccion1.denominador
-      self.denominador = self.denominador * fraccion1.numerador
+      numerador = self.numerador * fraccion1.denominador
+      denominador = self.denominador * fraccion1.numerador
+      return numerador,denominador
    end
 end
 
-fraccion1 = Fraccion.new(2,1)
-fraccion2 = Fraccion.new(3,6)
-fraccionResultado = Fraccion.new(1,1)
-fraccion1.to_s();
-fraccion2.to_s();
-
-#fraccionResultado = fraccion1.suma(fraccion2)
-#fraccionResultado.to_s()
-
-#fraccionResultado = fraccion1.resta(fraccion2)
-#fraccionResultado.to_s()
-
-#fraccionResultado = fraccion1.producto(fraccion2)
-#fraccionResultado.to_s()
-
-#fraccionResultado = fraccion1.division(fraccion2)
-#fraccionResultado.to_s()
+#fraccion1 = Fraccion.new(2,1)
+#fraccion2 = Fraccion.new(3,6)
+#puts "#{fraccion1.suma(fraccion2)}"
 
